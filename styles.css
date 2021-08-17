@@ -1,27 +1,7 @@
-html {
-    font-family: 'Courier New', Courier, monospace;
+.header-logos {
+    display: inline;
 }
-.header {
-    width: 390px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.header > img {
-    border: none;
-}
-.abstract {
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.content {
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.contact {
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+.footer {
+    position: sticky;
+    bottom: 0;
 }

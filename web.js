@@ -1,11 +1,22 @@
-var app = new Vue({
-    el: '#app',
-    data: {
-        development: [],
-        articles: [],
-    }
-});
-fetch("./articles.json").then(response => response.json())
-    .then(data => app.articles = data.items);
-fetch("./development.json").then(response => response.json())
-    .then(data => app.development = data.items);
+function createApp() {
+    return new Vue({
+        el: '#app',
+        data: {
+            development: [],
+            articles: [],
+        }
+    });
+}
+
+function setContentData(dataUrl, name, app) {
+    fetch(dataUrl).then(response => response.json())
+        .then(data => app[name] = data.items);
+}
+
+function main() {
+    const app = createApp();
+    setContentData("./articles.json", "articles", app);
+    setContentData("./development.json", "development", app);
+}
+
+main();
