@@ -76,7 +76,8 @@
                         Development
                     </h2>
                     <div class="w3-container" v-for="item in development">
-                        <h5 class="w3-opacity"><b>{{ item.name }}</b></h5>
+                        <h5 class="w3-opacity"><b>{{ item.name }}</b> <img v-if="item.status" v-bind:src="item.status">
+                            <img v-if="item.npm" v-bind:src="item.npm"></h5>
                         <p>{{ item.desc }}</p>
                         <p><a v-bind:href="item.link">{{ item.link }}</a></p>
                         <hr>
