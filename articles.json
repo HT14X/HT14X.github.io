@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "name": "@ht14x/light-mapper",
+            "desc": "Article about @ht14x/light-mapper and how to use it",
+            "link": "https://medium.com/@hajekj14/ht14x-light-mapper-simple-object-to-object-mapper-for-typescript-8fb44c992476"
+        },
+        {
+            "name": "@ht14x/keyss",
+            "desc": "Article about @ht14x/keyss and how to use it",
+            "link": "https://medium.com/@hajekj14/ht14x-keyss-utility-for-filtering-pressed-keyss-for-angular-ee8c7de8d122"
+        }
+    ]
+}

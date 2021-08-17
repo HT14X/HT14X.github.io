@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "name": "GitHub",
+            "desc": "HT14X GitHub page",
+            "link": "https://github.com/HT14X"
+        },
+        {
+            "name": "@ht14x/light-mapper",
+            "desc": "Advanced object mapping tool, especially useful for third-party object mapping and transformation.",
+            "link": "https://github.com/HT14X/light-mapper"
+        },
+        {
+            "name": "@ht14x/keyss",
+            "desc": "Utility for filtering pressed keyss",
+            "link": "https://github.com/HT14X/ng-tools/tree/main/libs/keyss"
+        }
+    ]
+}

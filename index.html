@@ -19,12 +19,12 @@
         font-family: "Roboto", sans-serif
     }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
 <body class="w3-light-grey">
 
     <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
+    <div id="app" class="w3-content w3-margin-top" style="max-width:1400px;">
         <!-- The Grid -->
         <div class="w3-row-padding">
 
@@ -69,41 +69,22 @@
                             class="fa fa-code fa-fw w3-margin-right w3-xxlarge "></i>Open Source
                         Development
                     </h2>
-                    <div class="w3-container">
-                        <h5 class="w3-opacity"><b>GitHub</b></h5>
-                        <p><a href="https://github.com/HT14X">https://github.com/HT14X</a></p>
+                    <div class="w3-container" v-for="item in development">
+                        <h5 class="w3-opacity"><b>{{ item.name }}</b></h5>
+                        <p>{{ item.desc }}</p>
+                        <p><a v-bind:href="item.link">{{ item.link }}</a></p>
                         <hr>
-                    </div>
-                    <div class="w3-container">
-                        <h5 class="w3-opacity"><b>@ht14x/light-mapper</b></h5>
-                        <p><a href="https://github.com/HT14X/light-mapper">https://github.com/HT14X/light-mapper</a></p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <h5 class="w3-opacity"><b>@ht14x/keyss</b></h5>
-                        <p><a
-                                href="https://github.com/HT14X/ng-tools/tree/main/libs/keyss">https://github.com/HT14X/ng-tools/tree/main/libs/keyss</a>
-                        </p><br>
                     </div>
                 </div>
 
                 <div class="w3-container w3-card w3-white">
                     <h2 class="w3-text-grey w3-padding-16"><i
                             class="fa fa-folder fa-fw w3-margin-right w3-xxlarge "></i>Articles</h2>
-                    <div class="w3-container">
-                        <h5 class="w3-opacity"><b>@ht14x/light-mapper</b></h5>
-                        <p><a
-                                href="https://medium.com/@hajekj14/ht14x-light-mapper-simple-object-to-object-mapper-for-typescript-8fb44c992476">
-                                https://medium.com/@hajekj14/ht14x-light-mapper-simple-object-to-object-mapper-for-typescript-8fb44c992476
-                            </a></p>
-                        <hr>
-                    </div>
-                    <div class="w3-container">
-                        <h5 class="w3-opacity"><b>@ht14x/keyss</b></h5>
-                        <p><a
-                                href="https://medium.com/@hajekj14/ht14x-keyss-utility-for-filtering-pressed-keyss-for-angular-ee8c7de8d122">
-                                https://medium.com/@hajekj14/ht14x-keyss-utility-for-filtering-pressed-keyss-for-angular-ee8c7de8d122
-                            </a></p>
+
+                    <div class="w3-container" v-for="item in articles">
+                        <h5 class="w3-opacity"><b>{{ item.name }}</b></h5>
+                        <p>{{ item.desc }}</p>
+                        <p><a v-bind:href="item.link">{{ item.link }}</a></p>
                         <hr>
                     </div>
                 </div>
@@ -116,6 +97,7 @@
 
         <!-- End Page Container -->
     </div>
+    <script type="text/javascript" src="./web.js"></script>
 </body>
 
 </html>
